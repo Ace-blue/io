@@ -13,10 +13,9 @@ redirect_from:
 </style>
 
 --------
-School of Electronic Information
 
 ## Education
-I got my master's and bachelor degree in Electronic Information and Technology from [Central South University, Changsha](https://en.csu.edu.cn/) in 2022. I am currently a Ph.D. student in [Sun Yat-Sen University, Guangzhou](https://www.sysu.edu.cn) under the supervision of [Prof. Jianhuang Lai](https://scholar.google.com/citations?user=ZQ4Z5YIAAAAJ&hl=en&oi=ao). My research interests include computer vision and deep learning.                                                                                                                                         
+I got my bachelor and master's degree in Electronic Information and Technology from [Central South University, Changsha](https://en.csu.edu.cn/) in 2022. I am currently a Ph.D. student in [Sun Yat-Sen University, Guangzhou](https://www.sysu.edu.cn) under the supervision of [Prof. Jianhuang Lai](https://scholar.google.com/citations?user=ZQ4Z5YIAAAAJ&hl=en&oi=ao). My research interests include computer vision and deep learning.                                                                                                                                         
 
 - <img src="..\images\sysu.png" alt="drawing" style="width:50px;" align="middle" border="3"/> Ph.D in Sun Yat-Sen University, 2023
 
