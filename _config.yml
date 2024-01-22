@@ -7,14 +7,14 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Ace-blue"
+title                    : "😺"
 title_separator          : "|"
 name                     : &name "
 School of Computer Science and Engineering, SYSU"
 description              : &description "A personal site of Zeyu Zhang"
 url                      : https://ace-blue.github.io/io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-logo                     : "images/lk.png"
+logo                     : "lk.png"
 repository               : "Ace-blue/io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
@@ -83,8 +83,8 @@ analytics:
 # Site Author
 author:
   name             : "Zeyu Zhang"
-  avatar           : "images/zzy.jpg"
-  bio              : "Just a student"
+  avatar           : "zzy.jpg"
+  bio              : "Student"
   location         : "Guangzhou"
   employer         :
   pubmed           : 
