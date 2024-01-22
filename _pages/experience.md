@@ -16,6 +16,7 @@ redirect_from:
 
 
 ## Education
+I got my master's degree in Electrical and Computer Engineering from [University of California, San Diego](https://ucsd.edu/) in 2021 and my bachelor degree in Computer Science and Engineering from [Southeast University](https://www.seu.edu.cn/english/), China in 2019. I was also fortunate to work with [Prof.Pengtao Xie](https://pengtaoxie.github.io/), [Prof.Rose Yu](http://roseyu.com/), [Prof.Fenglong ma](http://personal.psu.edu/ffm5105/) and [Prof.Yining Hu](https://www.researchgate.net/profile/Yining-Hu-4). I used to be a visiting student at University of Ottawa, supervised by [Prof.Robert Laganière](http://www.site.uottawa.ca/~laganier/).                                                                                                                                        
 I got my master's degree from [Central South University](https://en.csu.edu.cn/) in 2022.
 - <img src="..\images\sysu.png" alt="drawing" style="width:50px;" align="middle" border="3"/> Ph.D in Sun Yat-Sen University, 2023
 
