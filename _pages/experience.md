@@ -14,12 +14,15 @@ redirect_from:
 --------
 
 ## Education
-I got my master's degree from [Central South University, Changsha](https://en.csu.edu.cn/) in 2022.
+I got my master's degree from [Central South University](https://en.csu.edu.cn/) in 2022.
+- <img src="..\images\sysu.png" alt="drawing" style="width:50px;" align="middle" border="3"/> Ph.D in Sun Yat-Sen University, 2023
+
+- <img src="..\images\csu.jpg" alt="drawing" style="width:50px;" align="middle" border="3"/> M.S. and B.S. in Central South University, 2015-2022
 
 --------
 ## Work experience
 
-* [IEVision Inc.](http://www.ievision.com/index_en.aspx) | Spring 2023
+* <img src="..\images\hy.png" alt="drawing" style="width:50px;" align="middle" border="3"/> [IEVision Inc.](http://www.ievision.com/index_en.aspx) | Spring 2023
 
   * Supervisor: [Junyong Zhu](https://www.scholarmate.com/P/nMZ36z?)
   * Industrial defect detection for smart phones
