@@ -6,7 +6,7 @@ main:
   - title: "Experience"
     url: /experience/
     
-  - title: "Others"
-    url: /other/
+  # - title: "Others"
+  #   url: /other/
     
 
