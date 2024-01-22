@@ -13,11 +13,11 @@ redirect_from:
 </style>
 
 --------
-
+School of Electronic Information
 
 ## Education
-I got my master's degree in Electrical and Computer Engineering from [University of California, San Diego](https://ucsd.edu/) in 2021 and my bachelor degree in Computer Science and Engineering from [Southeast University](https://www.seu.edu.cn/english/), China in 2019. I was also fortunate to work with [Prof.Pengtao Xie](https://pengtaoxie.github.io/), [Prof.Rose Yu](http://roseyu.com/), [Prof.Fenglong ma](http://personal.psu.edu/ffm5105/) and [Prof.Yining Hu](https://www.researchgate.net/profile/Yining-Hu-4). I used to be a visiting student at University of Ottawa, supervised by [Prof.Robert Laganière](http://www.site.uottawa.ca/~laganier/).                                                                                                                                        
-I got my master's degree from [Central South University](https://en.csu.edu.cn/) in 2022.
+I got my master's and bachelor degree in Electronic Information and Technology from [Central South University, Changsha](https://en.csu.edu.cn/) in 2022. I am currently a Ph.D. student in [Sun Yat-Sen University, Guangzhou](https://www.sysu.edu.cn) under the supervision of [Prof. Junyong Zhu](https://www.scholarmate.com/P/nMZ36z?).                                                                                                                                         
+
 - <img src="..\images\sysu.png" alt="drawing" style="width:50px;" align="middle" border="3"/> Ph.D in Sun Yat-Sen University, 2023
 
 - <img src="..\images\csu.jpg" alt="drawing" style="width:50px;" align="middle" border="3"/> M.S. and B.S. in Central South University, 2015-2022
