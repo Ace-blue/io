@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="a novel knowledge-transfer task, termed as Deep  Model Reassembly (DeRy), for general-purpose model reuse.">
+  <meta name="keywords" content="Transfer Learning, Model Reassembly">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deep Model Reassembly</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/lv-logo.jpg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/Adamdad/KnowledgeFactor">
+            KnowledgeFactor
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Deep Model Reassembly<br>NeurIPS 2022</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://adamdad.github.io">Xingyi Yang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=DdCAbWwAAAAJ&hl=en">Daquan Zhou</a><sup>1</sup><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="http://121.37.94.87">Songhua Liu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=8GQnNP0AAAAJ">Jingwen Ye</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://sites.google.com/site/sitexinchaowang/">Xinchao Wang</a><sup>1</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>National University of Singapore,</span>
+            <span class="author-block"><sup>2</sup>Bytedance</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://openreview.net/forum?id=gtCPWaY5bNh"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2210.17409"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=q3WHjFWJ8w4"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Adamdad/DeRy"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link.
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/teaser.mp4"
+                type="video/mp4">
+      </video> -->
+      <img src="./static/images/pipeline4.jpg" alt="DeRy pipeline">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">DeRy</span> partitions pre-trained models into equivalent sets of neural blocks and
+        then reassemble them for downstream transfer.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this paper, we explore a novel knowledge-transfer task, termed as <span class="dnerf">Deep
+              Model Reassembly (DeRy)</span>, for general-purpose model reuse.
+          </p>
+          <p>
+            Given a collection of heterogeneous models pre-trained from distinct sources and with diverse
+            architectures, the goal of DeRy, as its name implies, is to first dissect each
+            model into distinctive building blocks, and then selectively reassemble the derived
+            blocks to produce customized networks under both the hardware resource and
+            performance constraints. Such ambitious nature of DeRy inevitably imposes
+            significant challenges, including, in the first place, the feasibility of its solution. We
+            strive to showcase that, through a dedicated paradigm proposed in this paper,
+            DeRy can be made not only possibly but practically efficiently. Specifically,
+            we conduct the partitions of all pre-trained networks jointly via a cover set
+            optimization, and derive a number of equivalence set, within each of which the
+            network blocks are treated as functionally equivalent and hence interchangeable.
+            The equivalence sets learned in this way, in turn, enable picking and assembling
+            blocks to customize networks subject to certain constraints, which is achieved via
+            solving an integer program backed up with a training-free proxy to estimate the
+            task performance.
+          </p>
+          <p>
+            The reassembled models, give rise to gratifying performances
+            with the user-specified constraints satisfied. We demonstrate that on ImageNet, the
+            best reassemble model achieves 78.6% top-1 accuracy without fine-tuning, which
+            could be further elevated to 83.2% with end-to-end training. Our code is available
+            at https://github.com/Adamdad/DeRy
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/q3WHjFWJ8w4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- Concurrent Work. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Resource</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Our team is trying to unleash power of pre-trained models by modularizing the network design. Here are some related papers or projects.
+          </p>
+          <ul>
+            <li><p>
+              <a href="https://arxiv.org/abs/2207.03337"><b>Factorizing knowledge in neural networks</b></a> <br>
+              Xingyi Yang, Jingwen Ye, Xinchao Wang<br>
+              ECCV 2022
+            </p></li>
+            <li><p>
+              <a href="https://arxiv.org/abs/2207.08224"><b>Learning with Recoverable Forgetting</b></a> <br>
+              Jingwen Ye, Yifang Fu, Jie Song, Xingyi Yang, Songhua Liu, Xin Jin, Mingli Song, Xinchao Wang <br>
+              ECCV 2022
+            </p></li>
+            <li><p>
+              <a herf="https://blog.google/technology/ai/introducing-pathways-next-generation-ai-architecture/">Google PathWay</a> 
+              is a new AI architecture that will handle many tasks at once, with sparse activated neurons.
+            </p></li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{yang2022dery,
+  author    = {Xingyi Yang, Daquan Zhou, Songhua Liu, Jingwen Ye, Xinchao Wang},
+  title     = {Deep Model Reassembly},
+  journal   = {NeurIPS},
+  year      = {2022},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/Adamdad" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. We sincerely thank <a herf="https://keunhong.com">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Consistent-Teacher provides strong results on a large range of SSOD evaluations.">
+  <meta name="keywords" content="Semi-supervised, Object Detection">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Consistent-Teacher</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/lv-logo.jpg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/jshilong/GroupRCNN">
+            GroupRCNN
+          </a>
+          <a class="navbar-item" href="https://github.com/jshilong/DDQ">
+            DDQ DETR
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Consistent-Teacher: Towards Reducing Inconsistent Pseudo-targets in Semi-supervised Object Detection</h1> <br>
+          <h3>CVPR 2023 (&#128293;<b>Hightlight, 2.5% of all submissions</b>&#128293;)</h3>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=q4lnWaoAAAAJ&hl=en">Xinjiang Wang</a><sup>*</sup><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://adamdad.github.io">Xingyi Yang</a><sup>*</sup><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://jshilong.github.io/">Shilong Zhang</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://github.com/williamium3000">Yijiang Li</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com.hk/citations?user=PnNAAasAAAAJ&hl=en">Litong Feng</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="">Shijie Fang</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=kV3WvXcAAAAJ&hl=zh-CN">Chengqi Lyu</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://chenkai.site/">Kai Chen</a><sup>1,2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.statfe.com/">Wayne Zhang</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Sensetime Research,</span>
+            <span class="author-block"><sup>2</sup>Shanghai AI Lab,</span>
+            <span class="author-block"><sup>3</sup>National University of Singapore,</span>
+            <span class="author-block"><sup>4</sup>Peking University</span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>*</sup>Co-first Author</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2210.17409"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2210.17409"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=q3WHjFWJ8w4"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/Adamdad/ConsistentTeacher"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link.
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="https://homes.cs.washington.edu/~kpar/nerfies/videos/teaser.mp4"
+                type="video/mp4">
+      </video> -->
+      <img src="./static/images/pipeline4.jpg" alt="DeRy pipeline">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Consistent-Teacher</span> includes 3 modules to stabilize the pseudo labels in SSOD, namely adaptive anchor assignment (ASA), 
+        3D feature alignment module (FAM-3D) and Gaussian Mixture Model based threshold (GMM).
+
+        <b>We can train your detector to 40 mAP on MS-COCO with 10% labels.</b>
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this study, we dive deep into the inconsistency of pseudo targets in semi-supervised object detection (SSOD). 
+            Our core observation is that the oscillating pseudo targets undermine the training of an accurate semi-supervised detector.
+            It not only injects noise into student training but also leads to severe overfitting on the classification task. 
+            Therefore, we propose a systematic solution, termed Consistent-Teacher , to reduce the inconsistency. 
+            First, adaptive anchor assignment (ASA) substitutes the static IoU-based strategy, which enables the student 
+            network to be resistant to noisy pseudo bounding boxes; Then we calibrate the subtask predictions by designing 
+            a 3D feature alignment module (FAM-3D). It allows each classification feature to adaptively query the optimal
+             feature vector for the regression task at arbitrary scales and locations. Lastly, a Gaussian Mixture Model (GMM) 
+             dynamically revises the score threshold of the pseudo-bboxes, which stabilizes the number of ground-truths at an 
+             early stage and remedies the unreliable supervision signal during training. Consistent-Teacher provides strong 
+             results on a large range of SSOD evaluations. It achieves 40.0 mAP with ResNet-50 backbone given only 10% of 
+             annotated MS-COCO data, which surpasses previous baselines using pseudo labels by around 3 mAP. When trained on 
+             fully annotated MS-COCO with additional unlabeled data, the performance further increases to 47.7 mAP. 
+             Our code is open-sourced at https://github.com/Adamdad/ConsistentTeacher.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/q3WHjFWJ8w4?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Motivation</h2>
+    <!-- Concurrent Work. -->
+    <b>Inconsistency</b> refers to the fact that the <i>pseudo boxes may be highly inaccurate and vary greatly</i> at different stages of training.
+    <img src="./static/images/motivation.jpg" alt="motivation">
+    <h2 class="subtitle has-text-centered">
+      <span class="dnerf">Motivation: Inconsisteny For SSOD</span> 
+    </h2>
+    <p>
+      <b>(Left)</b> We compare the training losses between the <b>Mean-Teacher</b> and our <b>Consistent-Teacher</b>. 
+      In <b>Mean-Teacher</b>, inconsistent pseudo targets lead to overfitting on the classification branch, 
+      while regression losses become difficult to converge. In contrast, our approach sets consistent optimization objectives for the students, effectively balancing the two tasks and preventing overfitting. 
+    </p>
+    <p>
+      <b>(Right)</b> Snapshots for the dynamics of pseudo labels and assignment. The <b style="color:green;">Green</b> and <b style="color:red;">Red</b> bboxes refer to the ground-truth and pseudo bbox for the polar bear. 
+      <b style="color:red;">Red dots</b> are the assigned anchor boxes for the pseudo label. 
+      The heatmap indicates the dense confidence score predicted by the teacher (brighter the larger). 
+      The nearby board is finally misclassified as a polar bear in the baseline while our adaptive assignment prevents overfitting.
+    </p>
+    <br>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Results</h2>
+    <!-- Concurrent Work. -->
+
+    Our work address inconsistency in the SSOD. Here are some sample detection results at different timestep of during training
+
+    <p align="center"><b style="color:red;">Red</b>: False Positive; 
+      <b style="color:Blue;">Blue</b>: True Postive; 
+      <b style="color:green;">Green</b>: Ground-truth</p>
+    <table style="margin-left:auto;margin-right:auto;text-align: center;height: 250px;width: 700px">
+      <tr>
+        <td>Mean-Teacher</td>
+        <td>Consistent-Teacher</td>
+      </tr>
+      <tr>
+        <td><img src="static/images/videos/Giraffa/MeanTeacher.gif" alt="Computer man" style="width:320px;height:240px;"></td>
+        <td><img src="static/images/videos/Giraffa/ConsistentTeacher.gif" alt="Computer man" style="width:320px;height:240px;"></td>
+      </tr>
+      <tr>
+        <td><img src="static/images/videos/Zebra/MeanTeacher.gif" alt="Computer man" style="width:320px;height:240px;"></td>
+        <td><img src="static/images/videos/Zebra/ConsistentTeacher.gif" alt="Computer man" style="width:320px;height:240px;"></td>
+      </tr>
+      
+      <tr>
+        <td><img src="static/images/videos/Polar_bear/MeanTeacher.gif" alt="Computer man" style="width:320px;height:240px;"></td>
+        <td><img src="static/images/videos/Polar_bear/ConsistentTeacher.gif" alt="Computer man" style="width:320px;height:240px;"></td>
+      </tr>
+    </table>
+    <p align="center">We also plot the different situtations caused by the inconsistency, and how we address them.</p>
+    <p align="center"><b style="color:red;">Red</b>: False Positive; 
+      <b style="color:Blue;">Blue</b>: True Postive; 
+      <b style="color:Orange;">Orange</b>: Ground-truth</p>
+    <img src="static/images/compare1.jpg" alt="Computer man" style="display: block;margin-left:auto;margin-right:auto;width:800px">
+
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Demos</h2>
+    <!-- Concurrent Work. -->
+    <p align="center">Here are some demo videos for in the wild object detection</p>
+    
+
+    <table style="margin-left:auto;margin-right:auto;text-align: center;height: 250px;width: 1000px">
+      <tr>
+        <td><video width="720" controls>
+          <source src="static/images/videos/tmp_Frl08A9S.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video></td></tr>
+      <tr>
+        <td><video width="720" controls>
+          <source src="static/images/videos/tmp2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video></td></tr>
+        <tr>
+        <td><video width="720" controls>
+          <source src="static/images/videos/tmp.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video></td>
+      </tr>
+    </table>
+
+  </div>
+</section>
+
+
+
+
+<!-- <section class="section">
+  <div class="container is-max-desktop"> -->
+
+    <!-- Concurrent Work. -->
+    <!-- <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Resource</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Our team is trying to unleash power of pre-trained models by modularizing the network design. Here are some related papers or projects.
+          </p>
+          <ul>
+            <li><p>
+              <a href="https://arxiv.org/abs/2207.03337"><b>Factorizing knowledge in neural networks</b></a> <br>
+              Xingyi Yang, Jingwen Ye, Xinchao Wang<br>
+              ECCV 2022
+            </p></li>
+            <li><p>
+              <a href="https://arxiv.org/abs/2207.08224"><b>Learning with Recoverable Forgetting</b></a> <br>
+              Jingwen Ye, Yifang Fu, Jie Song, Xingyi Yang, Songhua Liu, Xin Jin, Mingli Song, Xinchao Wang <br>
+              ECCV 2022
+            </p></li>
+            <li><p>
+              <a herf="https://blog.google/technology/ai/introducing-pathways-next-generation-ai-architecture/">Google PathWay</a> 
+              is a new AI architecture that will handle many tasks at once, with sparse activated neurons.
+            </p></li>
+          </ul>
+          
+        </div>
+      </div>
+    </div> -->
+    <!--/ Concurrent Work. -->
+
+  <!-- </div>
+</section> -->
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{wang2023consistent,
+      author    = {Xinjiang Wang, Xingyi Yang, Shilong Zhang, Yijiang Li, Litong Feng, Shijie Fang, Chengqi Lyu, Kai Chen, Wayne Zhang },
+      title     = {Consistent-Teacher: Towards Reducing Inconsistent Pseudo-targets in Semi-supervised Object Detection},
+      journal   = {The IEEE / CVF Computer Vision and Pattern Recognition Conference (CVPR)},
+      year      = {2023},
+  }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/Adamdad" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. We sincerely thank <a herf="https://keunhong.com">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
