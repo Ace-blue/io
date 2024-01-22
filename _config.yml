@@ -7,15 +7,15 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Adam"
+title                    : "Ace-blue"
 title_separator          : "|"
 name                     : &name "
-Department of Electrical and Computer Engineering, NUS"
-description              : &description "A personal site of Xingyi Yang"
-url                      : https://Adamdad.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+School of Computer Science and Engineering, SYSU"
+description              : &description "A personal site of Zeyu Zhang"
+url                      : https://ace-blue.github.io/io/ # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-logo                     : "site-logo.png"
-repository               : "Adamdad/Adamdad.github.io"
+logo                     : "images/lk.png"
+repository               : "Ace-blue/io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 breadcrumbs              : false # true, false (default)
 words_per_minute         : 160
@@ -82,15 +82,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Xingyi Yang"
-  avatar           : "58d7005687456f7f1d8b46b6_da39a3ee5e6b4b0d3255bfef95601890afd80709.jpg"
-  bio              : "Ph.D of SP & ML, NUS"
-  location         : "Singapore"
+  name             : "Zeyu Zhang"
+  avatar           : "images/zzy.jpg"
+  bio              : "Just a student"
+  location         : "Guangzhou"
   employer         :
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=1n2OPtwAAAAJ"
-  email            : "xyang@u.nus.edu"
-  researchgate     : "https://www.researchgate.net/profile/Xingyi_Yang4"
+  googlescholar    : "https://scholar.google.com/citations?user=OExM2nIAAAAJ"
+  email            : "zhangzy336@mail2.sysu.edu.cn"
+  researchgate     : ""
   uri              :
   bitbucket        :
   codepen          :
@@ -98,13 +98,13 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "Adamdad"
+  github           : "Ace-blue"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         : "xingyi-adam-yang-72375b170/"
+  linkedin         : ""
   orcid            : 
   pinterest        :
   soundcloud       :
@@ -117,7 +117,7 @@ author:
   xing             :
   youtube          :
   wikipedia        :
-  zhihu            : "https://www.zhihu.com/people/yang-xing-yi-33-54"
+  zhihu            : ""
 
 
 # Reading Files
@@ -125,6 +125,7 @@ include:
   - .htaccess
   - _pages
   - files
+  - images
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
